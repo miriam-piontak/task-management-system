@@ -13,9 +13,3 @@ A robust task management platform that enables users to organize their daily sch
 * **Backend:** Node.js, Express
 * **Database:** MongoDB
 
-## 📋 Setup Instructions
-
-1. **Clone the repository:**
-```bash
-   git clone [YOUR_REPO_URL]
-   cd task-management-system
