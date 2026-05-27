@@ -1,0 +1,40 @@
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="login-header">
+      <h1>ברוכה הבאה</h1>
+      <p>התחברי למערכת ניהול המשימות שלך</p>
+    </div>
+
+    <form class="login-form">
+
+      <div class="input-group">
+        <label>שם משתמש</label>
+        <input 
+          type="text"
+          name="userName"
+          placeholder="הכניסי שם משתמש"
+          [(ngModel)]="name"
+        >
+      </div>
+
+      <div class="input-group">
+        <label>סיסמה</label>
+        <input 
+          type="password"
+          name="password"
+          placeholder="הכניסי סיסמה"
+          [(ngModel)]="pass"
+        >
+      </div>
+
+      <button type="button" class="login-button" (click)="go()">
+        התחברות
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

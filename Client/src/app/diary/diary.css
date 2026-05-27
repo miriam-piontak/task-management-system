@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+.diary-page{
+  padding:32px;
+  direction:rtl;
+  background:#f6f8f7;
+  min-height:100vh;
+  font-family:'Rubik', sans-serif;
+  color:#1f2a28;
+}
+
+.diary-header h2{
+  margin:0;
+  font-size:34px;
+  font-weight:700;
+  color:#1c2b26;
+}
+
+.diary-header p{
+  margin:6px 0 20px;
+  color:#5f6f6a;
+  font-size:15px;
+}
+
+.calendar-wrapper{
+  background:#ffffff;
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border:1px solid #e8efec;
+}
+
+/* חשוב: תיקון טקסט של fullcalendar */
+.calendar-wrapper ::ng-deep .fc{
+  color:#1f2a28;
+  font-family:'Rubik', sans-serif;
+}
+
+.calendar-wrapper ::ng-deep .fc-toolbar-title{
+  color:#1f2a28;
+  font-weight:600;
+}
+
+.calendar-wrapper ::ng-deep .fc-col-header-cell-cushion{
+  color:#2f3f3a;
+  font-weight:500;
+}
+
+.calendar-wrapper ::ng-deep .fc-daygrid-day-number{
+  color:#2b3a36;
+}
+
+/* טעינה */
+.loading-card{
+  background:#fff;
+  border-radius:18px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  border:1px solid #e8efec;
+  color:#2b3a36;
+}
+
+.spinner{
+  width:38px;
+  height:38px;
+  border:4px solid #e6f2ed;
+  border-top:4px solid #79d8bc;
+  border-radius:50%;
+  margin:0 auto 12px;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}

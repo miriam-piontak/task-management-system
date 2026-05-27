@@ -1,0 +1,22 @@
+<div class="page-container">
+  <h2 class="page-title">ניהול סוגי משימות</h2>
+
+  <div class="list-wrapper">
+    @if (allTypes.length > 0) {
+      @for (type of allTypes; track type.code) {
+        <div class="task-card">
+          <div class="card-info">
+            <span class="label">שם הקטגוריה:</span>
+            <span class="value">{{ type.typeName }}</span>
+          </div>
+          <div class="card-info">
+            <span class="label">קוד:</span>
+            <span class="value">{{ type.code }}</span>
+          </div>
+        </div>
+      }
+    } @else {
+      <p class="empty-msg">טוען סוגי משימות...</p>
+    }
+  </div>
+</div>

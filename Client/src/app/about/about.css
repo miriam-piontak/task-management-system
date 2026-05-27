@@ -1,0 +1,61 @@
+.about-page{
+  padding:40px;
+  direction:rtl;
+  font-family:'Rubik', sans-serif;
+  background:linear-gradient(135deg,#f6f8f7,#eef7f3);
+  min-height:100vh;
+}
+
+.about-hero{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.about-hero h1{
+  font-size:40px;
+  margin:0;
+  color:#1f2f2b;
+}
+
+.about-hero p{
+  margin-top:10px;
+  color:#6a7f78;
+  font-size:16px;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:20px;
+}
+
+.about-card{
+  background:#fff;
+  padding:22px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  border:1px solid #e6efea;
+  transition:.25s;
+}
+
+.about-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 35px rgba(0,0,0,0.1);
+}
+
+.about-card h3{
+  margin:0 0 10px;
+  color:#23433b;
+  font-size:18px;
+}
+
+.about-card p{
+  margin:0;
+  color:#5f6f6a;
+  line-height:1.6;
+  font-size:14px;
+}
+
+.highlight{
+  border-right:5px solid #79d8bc;
+}

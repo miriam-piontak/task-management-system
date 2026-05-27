@@ -1,0 +1,130 @@
+/* 1. הגדרות בסיס ופונטים */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Heebo:wght@400;700;900&display=swap');
+
+:root {
+  --primary-glow: #FF2D6F;
+  --secondary-glow: #B44FFF;
+  --accent-blue: #00C9FF;
+  --bg-dark: #0E0018;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --input-bg: rgba(10, 0, 20, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  font-family: 'Heebo', sans-serif;
+  background-color: var(--bg-dark);
+  color: white;
+  min-height: 100vh;
+  /* הרקע המיוחד שלך */
+  background-image: 
+    radial-gradient(circle at 15% 25%, rgba(255, 45, 111, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(0, 201, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(180, 79, 255, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. עיצוב גלובלי לכל ה-Inputs באתר */
+input, select, textarea {
+  background: var(--input-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 18px 15px;
+  color: rgb(80, 48, 48);
+  font-family: inherit;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  margin: 5px 0;
+  display: block;
+  width: 100%; /* שיתפרסו יפה */
+}
+
+/* הילה כשעומדים על השדה */
+input:hover {
+  border-bottom-color: var(--accent-blue);
+}
+
+/* אפקט ניאון כשלוחצים על השדה */
+input:focus {
+  outline: none;
+  background: rgba(180, 79, 255, 0.1);
+  border-bottom-color: var(--secondary-glow);
+  box-shadow: 0 0 15px rgba(180, 79, 255, 0.3);
+}
+
+/* עיצוב גלובלי לכל הכפתורים */
+button {
+  background: var(--primary-glow);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 9px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.9s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 45, 111, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 45, 111, 0.5);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(0);
+  
+}
+
+/* עיצוב לאייקון לוח שנה (Date Picker) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* 3. מחלקת "זכוכית" גלובלית - למיכלים של טפסים */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* עיצוב כותרות גלובלי */
+h1, h2, h3, p.form-title {
+  text-align: center;
+  color: rgb(93, 77, 77);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+.file{
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column; /* מסדר בטור */
+  align-items: stretch;    /* גורם לאינפוטים למלא את כל רוחב הקופסה */
+  gap: 20px;              /* רווח שווה ומדויק בין כל שדה ושדה */
+  padding: 20px;
+}

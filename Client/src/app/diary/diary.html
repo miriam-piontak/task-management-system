@@ -1,0 +1,23 @@
+<div class="diary-page">
+
+  <div class="diary-header">
+    <h2>יומן המשימות</h2>
+    <p>ניהול זמן חכם ומסודר</p>
+  </div>
+
+  <div class="diary-content">
+
+    @if (isLoaded) {
+      <div class="calendar-wrapper">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    } @else {
+      <div class="loading-card">
+        <div class="spinner"></div>
+        <p>טוען את היומן שלך...</p>
+      </div>
+    }
+
+  </div>
+
+</div>

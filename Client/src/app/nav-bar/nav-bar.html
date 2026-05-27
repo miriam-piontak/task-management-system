@@ -1,0 +1,60 @@
+<nav class="navbar">
+
+  <div class="navbar-top">
+    <div class="logo">TaskFlow</div>
+
+    <div class="user-status">
+      @if(getCurrent()=="Not connected"){
+        <p>אינך מחובר</p>
+      }
+      @else{
+        <p>שלום {{getCurrent()}}</p>
+      }
+    </div>
+  </div>
+
+  <ul class="nav-links">
+
+    @if(getCurrent()=="Not connected"){
+
+      <li>
+        <app-global-button buttonText="אודות" (myclick)="logOut()"></app-global-button>
+      </li>
+
+      <li>
+        <app-global-button buttonText="התחברות" (myclick)="navigateTo('/logIn')"></app-global-button>
+      </li>
+
+      <li>
+        <app-global-button buttonText="הרשמה" (myclick)="navigateTo('/signUp')"></app-global-button>
+      </li>
+    }
+
+    @if(getCurrent()!="Not connected"){
+
+      <li>
+        <app-global-button buttonText="המשימות שלי" (myclick)="navigateTo('/tasksList')"></app-global-button>
+      </li>
+
+      <li>
+        <app-global-button buttonText="יומן" (myclick)="navigateTo('/diary')"></app-global-button>
+      </li>
+
+      <li>
+        <app-global-button buttonText="הוספת משימה" (myclick)="navigateTo('/addTask')"></app-global-button>
+      </li>
+
+      <li>
+        <app-global-button buttonText="התנתק" (myclick)="logOut()"></app-global-button>
+      </li>
+    }
+
+    @if(getIsAdmin()){
+      <li>
+        <app-global-button buttonText="סוגי משימות" (myclick)="navigateTo('/tyeTaskList')"></app-global-button>
+      </li>
+    }
+
+  </ul>
+
+</nav>

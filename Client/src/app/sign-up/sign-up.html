@@ -1,0 +1,35 @@
+<div class="signup-page">
+
+  <form class="signup-card">
+
+    <h1>יצירת חשבון</h1>
+    <p>הצטרפי למערכת ניהול המשימות שלך</p>
+
+    <input 
+      type="text"
+      name="userName"
+      placeholder="שם משתמש"
+      [(ngModel)]="name"
+    >
+
+    <input 
+      type="password"
+      name="password"
+      placeholder="סיסמה"
+      [(ngModel)]="pass"
+    >
+
+    <input 
+      type="email"
+      name="email"
+      placeholder="כתובת מייל"
+      [(ngModel)]="email"
+    >
+
+    <button type="button" (click)="goToSignUp()">
+      הרשמה
+    </button>
+
+  </form>
+
+</div>
